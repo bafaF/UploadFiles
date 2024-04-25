@@ -1,0 +1,165 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #080710;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Upload card */
+.uploadCard {
+    width: 35%;
+    height: 80%;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+/* Upload div container */
+.uploadDiv {
+    height: 90%;
+}
+
+/* Upload form */
+#uploadForm {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+/* Input file */
+input[type="file"] {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+}
+
+/* Label focus style */
+input:focus + label {
+    outline: 2px solid;
+}
+h5 {
+    text-align: center;
+}
+.circularcontainer {
+    display: flex;
+    padding: 50px 0;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: conic-gradient(limegreen 0deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #080710;
+}
+
+/* Label and upload button */
+.labelAndUploadButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Card header */
+.card-header {
+    height: 20%;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px!important;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Card body */
+.cardBody {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Card footer */
+.card-footer {
+    height: 50px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px!important;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    color: white;
+
+}/* Upload Button */
+#uploadBtn{
+    background-color: #ffffff;
+    color: #080710;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+@media (max-width: 1023px) {
+    .uploadDiv{
+        height: 100%;
+        display: contents;
+    }
+    .uploadCard{
+        width: 80%;
+        height: 70%;
+    }
+    .cardBody,
+    h5,
+    label{
+        font-size: 32px;
+    }
+    #uploadBtn{
+        border-radius: 25px;
+        height: 70px;
+        width: 30%;
+        font-size: 32px;
+    }
+    .circular-progress{
+        height: 170px;
+        width: 170px;
+    }
+    .circular-progress::before{
+        height: 150px;
+        width: 150px;
+    }
+    .progress-value{
+        font-size: 48px;
+    }
+    .labelAndUploadButton{
+        height: auto;
+    }
+}

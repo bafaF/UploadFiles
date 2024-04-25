@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link th:href="@{/css/profile.css}" rel="stylesheet"/>
+    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/footer.css}" rel="stylesheet"/>
+
+    <script type="module" th:src="@{/js/profile.js}"></script>
+    <script type="module" th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<header th:replace="~{/header :: header}"></header>
+<div id="profilebody">
+
+        <div>
+            <button id="uploadedFilesBtn">Uploaded files</button>
+            <button id="downloadedFilesBtn">Downloaded files</button>
+        </div>
+
+    <div class="profileTable" id="profileFileTable">
+        <table class="fileTable" id="fileTable">
+            <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Uploading date</th>
+                <th>Info</th>
+            </tr>
+            </thead>
+            <tbody id="uploadedFileTable">
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="3">No more file</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="detail" id="detail">
+        <div class="detail-container">
+            <dl id="infoTable">
+
+            </dl>
+        </div>
+        <div class="detail-nav" id="btnDiv">
+
+        </div>
+    </div>
+
+    <div class="profileTable" id="profileDownloadTable">
+        <table class="downloadedTable" id="downloadedTable">
+            <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Downloaded date</th>
+                <th>Info</th>
+            </tr>
+            </thead>
+            <tbody id="downloadedFileTable">
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="3">No more file</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<footer th:replace="~{/footer :: footer}"></footer>
+
+</body>
+
+</html>

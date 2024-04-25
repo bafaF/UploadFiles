@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link th:href="@{/css/register.css}" rel="stylesheet"/>
+    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/footer.css}" rel="stylesheet"/>
+
+    <script type="text/javascript" th:src="@{/js/register.js}"></script>
+    <script type="module" th:src="@{/js/header.js}"></script>
+
+</head>
+<body>
+<section class="registerBody">
+<header th:replace="~{/header :: header}"></header>
+
+    <div class="registerForm">
+<div class="loginBtnDiv">
+    <a class="loginBtn" href="/login">Already registered ? Login</a>
+</div>
+
+<form>
+    <h3>Register</h3>
+
+    <label for="inputEmail">Email</label>
+    <input type="text" placeholder="Email" id="inputEmail">
+
+    <label for="inputPseudo">Pseudo</label>
+    <input type="text" placeholder="Pseudo" id="inputPseudo">
+
+    <label for="inputPassword">Password</label>
+    <input type="password" placeholder="Password" id="inputPassword">
+
+    <button type="button" class="registerBtn" onclick="register()">Register</button>
+    <div id="errorMessage"></div>
+    <div class="social" th:each="url : ${urls}">
+        <div class="go"><a class="googleLink" th:text="${url.key}" th:href="${url.value}">Google</a></div>
+        <!--<div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>-->
+    </div>
+</form>
+    </div>
+    <footer th:replace="~{/footer :: footer}"></footer>
+</section>
+</body>
+</html>

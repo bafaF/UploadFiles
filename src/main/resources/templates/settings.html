@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link th:href="@{/css/settings.css}" rel="stylesheet"/>
+    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/footer.css}" rel="stylesheet"/>
+
+  <script type="module" th:src="@{/js/settings.js}"></script>
+    <script type="module" th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<header th:replace="~{/header :: header}"></header>
+
+    <!--TODO settings page-->
+
+  <div class="settingsBody" id="settingsBody">
+      <h5 class="paramH5">Settings</h5>
+      <ul class="paramNavList">
+          <li>
+              <a class="settingsLink" id="editProfileBtn">Profile</a>
+          </li>
+          <li>
+              <a class="settingsLink">Help</a>
+          </li>
+          <li>
+              <a class="settingsLink" id="disconnectBtn">Disconnect</a>
+          </li>
+      </ul>
+  </div>
+
+<div class="profileSettings" id="profileSetting">
+
+    <div class="returnButton" id="returnSettingsButton">Return</div>
+
+    <ul>
+        <li>
+            <a id="editProfileLi" class="settingsLink">Edit Profile</a>
+        </li>
+       <!-- <li>
+            <a id="deleteProfileLi" class="settingsLink">Delete Profile</a>
+        </li> -->
+    </ul>
+</div>
+
+<div class="editProfileForm" id="editProfileForm">
+
+    <div class="returnButton" id="returnButton">Return</div>
+
+    <form class="deleteForm">
+        <h3 class="formTitle">Edit profile</h3>
+
+        <label class="formLabel" for="inputEmail">Email</label>
+        <input class="formInput" type="text" placeholder="Email" id="inputEmail">
+
+        <label class="formLabel" for="inputPassword">Password</label>
+        <input class="formInput" type="password" placeholder="Password" id="inputPassword">
+
+        <label class="formLabel" for="inputNewPassword">New password (Optionnal)</label>
+        <input class="formInput" type="password" placeholder="New password" id="inputNewPassword">
+
+        <label class="formLabel" for="inputNewPasswordConfirm">Confirm new password</label>
+        <input class="formInput" type="password" placeholder="Confirm new password" id="inputNewPasswordConfirm">
+
+        <button type="button" class="editBtn" id="editBtn">Edit</button>
+        <div id="errorMessage"></div>
+
+    </form>
+</div>
+
+<div class="deleteProfileForm" id="deleteProfileForm">
+    <div class="returnButton" id="returnDeleteProfileButton">Return</div>
+
+    <form class="editForm">
+        <h3 class="formTitle">Delete profile</h3>
+
+        <label class="formLabel" for="inputPassword">Password</label>
+        <input class="formInput" type="password" placeholder="Password" id="inputDeleteProfilePassword">
+
+        <label class="formLabel" for="inputNewPasswordConfirm">Confirm password</label>
+        <input class="formInput" type="password" placeholder="Confirm your password" id="inputDeleteProfilePasswordConfirm">
+
+        <button type="button" class="deleteBtn" id="deleteBtn">Delete</button>
+        <div id="errorDeleteProfileMessage"></div>
+
+    </form>
+</div>
+
+<footer th:replace="~{/footer :: footer}"></footer>
+</body>
+</html>

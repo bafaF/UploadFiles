@@ -1,0 +1,301 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #080710;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#profilebody{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#uploadedFilesBtn,
+#downloadedFilesBtn,
+.button,
+.close{
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #ffffff;
+    color: #080710;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#uploadedFilesBtn,
+#downloadedFilesBtn,
+.close{
+    line-height: 1;
+}
+
+.fileTable,
+.downloadedTable{
+    background-color: rgba(255,255,255,0.13);
+    color: white;
+    width: 100%;
+}
+
+.downloadedTable{
+    display: none;
+}
+.profileTable{
+    width: 40%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.profileTable::-webkit-scrollbar {
+    display: none;
+}
+#profileDownloadTable{
+    display: none;
+}
+
+table,
+td {
+    text-align: center;
+    border: 1px solid #333;
+}
+
+th{
+    width: 40%;
+    background-color: rgba(255,255,255,0.13);
+}
+
+td{
+    width: 15%;
+}
+
+tr{
+    width: 70%;
+}
+
+thead,
+tfoot {
+    text-align: center;
+    color: #fff;
+}
+
+
+
+html.open, body.open {
+    height: 100%;
+    overflow: hidden;
+}
+
+p {
+    text-align: center;
+    margin: 20px 0 60px;
+}
+
+main {
+
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+table {
+    display: block;
+}
+
+tr, td, tbody, tfoot {
+    display: block;
+}
+
+thead {
+    display: none;
+}
+
+tr {
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 10px 10px 0;
+    text-align: center;
+}
+td:before {
+    content: attr(data-title);
+    color: #7a91aa;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding-right: 10px;
+    display: block;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    font-weight: 700;
+}
+
+thead th {
+    color: #fff;
+    /*border: 1px solid #202932;*/
+}
+
+tfoot th {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #b8c4d2;
+}
+
+
+
+.select {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #28333f;
+}
+.select:before {
+    display: none;
+}
+
+.detail {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: #080710;
+}
+
+.detail-container {
+    margin: 0 auto;
+    padding: 40px;
+    width: 35%;
+    background-color: rgba(255,255,255,0.13);
+    color: white;
+    border-radius: 25px;
+}
+
+.detail-nav{
+    margin-right: 25px;
+    margin-top: 0;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+dd {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ac2647;
+    box-shadow: 0 1px 0 #c52c51;
+}
+
+@media (min-width: 460px) {
+    td:before {
+        display: inline-block;
+        text-align: right;
+        width: 140px;
+    }
+    .select {
+        padding-left: 160px;
+    }
+}
+@media (min-width: 720px) {
+    table {
+        display: table;
+    }
+    tr {
+        display: table-row;
+    }
+    td, th {
+        display: table-cell;
+    }
+    tbody {
+        display: table-row-group;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tfoot {
+        display: table-footer-group;
+    }
+    td {
+        border: 1px solid #28333f;
+    }
+    td:before {
+        display: none;
+    }
+    td, th {
+        padding: 10px;
+    }
+    tr:nth-child(2n+2) td {
+
+    }
+    tfoot th {
+        display: table-cell;
+    }
+    .select {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .fileTable,
+    .downloadedTable{
+        width: 100%;
+        font-size: 32px;
+    }
+    #profilebody{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5.5rem;
+    }
+    .button{
+        font-size: 32px;
+    }
+    .profileTable{
+        width: 80%;
+    }
+    #uploadedFilesBtn,
+    #downloadedFilesBtn{
+        font-size: 32px;
+    }
+    .detail{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .detail-container{
+        width: 80%;
+    }
+    .detail-nav{
+        margin-top: 25px;
+        margin-right: 0;
+    }
+    .close{
+        margin-right: 0;
+    }
+}

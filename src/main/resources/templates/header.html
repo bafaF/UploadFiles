@@ -1,0 +1,35 @@
+<link th:href="@{/css/header.css}" rel="stylesheet"/>
+
+<script type="module" th:src="@{/js/header.js}"></script>
+
+<div class="m-4 navBar" th:fragment="header">
+    <!-- Trigger Buttons HTML -->
+    <button type="button" class="btn btn-primary ms-4 btnMenu" data-bs-toggle="collapse" data-bs-target="#myCollapse">Menu</button>
+  <!-- Collapsible Element HTML -->
+  <div class="collapse infoNavbar" id="myCollapse">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link linkHeader" th:href="@{/upload}">Upload</a>
+      </li>
+      <div id="notconnected">
+        <li id="registerLink" class="nav-item">
+          <a class="nav-link linkHeader" th:href="@{/register}">Register</a>
+        </li>
+        <li id="loginLink" class="nav-item">
+          <a class="nav-link linkHeader" th:href="@{/login}">Login</a>
+        </li>
+      </div>
+      <div id="connected">
+        <li>
+          <div id="profileDiv">
+            <a class="nav-link linkHeader" th:href="@{/profile}">Profile</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link linkHeader" th:href="@{/settings}">Settings</a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+
